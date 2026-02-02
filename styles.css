@@ -1,0 +1,46 @@
+/* Container Fixes */
+ytd-video-renderer { position: relative; z-index: 1; transition: transform 0.2s; }
+
+/* The RGB Glow */
+.smart-best-pick::before {
+  content: '';
+  position: absolute;
+  top: -4px; left: -4px; right: -4px; bottom: -4px;
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8);
+  background-size: 400%;
+  z-index: -1;
+  border-radius: 16px;
+  animation: rgbGlow 8s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes rgbGlow { 0% {background-position: 0% 50%;} 100% {background-position: 400% 50%;} }
+
+/* Badge */
+.yt-smart-badge {
+  background: linear-gradient(90deg, #b827fc, #2c90fc);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: 8px; left: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+
+/* Sidebar */
+#smart-sorter-sidebar {
+  position: fixed; right: 20px; top: 80px; width: 200px;
+  background: rgba(15,15,15,0.95);
+  border: 1px solid #333; border-radius: 10px;
+  padding: 10px; z-index: 9999; color: #fff;
+  backdrop-filter: blur(5px);
+}
+.sidebar-header { border-bottom: 1px solid #444; padding-bottom: 5px; font-weight: bold; margin-bottom: 5px;}
+.sidebar-item { padding: 8px; border-radius: 5px; cursor: pointer; display: flex; gap: 5px; font-size: 11px;}
+.sidebar-item:hover { background: #333; }
+.s-rank { color: #b827fc; font-weight: bold; }
+.s-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

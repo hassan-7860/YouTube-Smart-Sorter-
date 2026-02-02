@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h2>🚀 Smart Sorter</h2>
+    <span class="badge">PRO</span>
+  </div>
+  
+  <div class="content">
+    <div class="control-group">
+      <label>🏆 Top Picks to Show</label>
+      <select id="numPicks">
+        <option value="3">Top 3 Results</option>
+        <option value="5">Top 5 Results</option>
+        <option value="10">Top 10 Results</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label>🎥 Filter Video Type</label>
+      <select id="videoType">
+        <option value="all">All Videos</option>
+        <option value="long">Long Videos Only</option>
+        <option value="shorts">Shorts Only</option>
+      </select>
+    </div>
+
+    <button id="saveBtn">Save & Refresh</button>
+    <div id="statusMsg">Settings Saved!</div>
+  </div>
+
+  <div class="footer">
+    Developed by <b>Hassan</b> • India 🇮🇳<br>
+    <a href="https://www.instagram.com/moh_hassan_07?igsh=a2d3aDN6ZWQ2ZHRp" target="_blank">Instagram</a>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
